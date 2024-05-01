@@ -48,7 +48,7 @@ router.post("/create-user", upload, async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://happyhome-378004.web.app/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -487,7 +487,7 @@ router.post("/forgot-password", async (req, res) => {
     await sendMail({
       email: email,
       subject: "set your password ",
-      message: `Hello ${email}, please click on the  link to reset your password: http://localhost:3000/reset-password/${token}`,
+      message: `Hello ${email}, please click on the  link to reset your password: https://happyhome-378004.web.app/reset-password/${token}`,
     });
     res.status(201).json({
       success: true,
