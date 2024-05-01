@@ -11,7 +11,7 @@ const rfs = require('rotating-file-stream');
 const moment = require('moment');
 
 app.use(cors({
-  origin: [' https://happyhome-378004.web.app',],
+  origin: ['https://happyhome-378004.web.app',],
   credentials: true
 }));
 const swaggerjsdoc=require('swagger-jsdoc');
