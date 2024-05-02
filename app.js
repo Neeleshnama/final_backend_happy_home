@@ -65,6 +65,14 @@ const payment = require("./controller/payment");
 const order = require("./controller/order");
 const event = require("./controller/event");
 const coupon = require("./controller/coupounCode");
+const message = require("./controller/message");
+const conversation = require("./controller/conversation");
+
+
+
+
+app.use("/api/v2/message", message);
+app.use("/api/v2/conversation", conversation);
 const { timeStamp } = require("console");
 
 app.use("/api/v2/order", order);
